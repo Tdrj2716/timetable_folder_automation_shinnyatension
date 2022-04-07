@@ -4,7 +4,6 @@ from time import sleep
 import os
 from settings import CHROME_DRIVER_DIR, ECS_ID, PASSWORD, BASE_DIR
 
-print(CHROME_DRIVER_DIR)
 driver = webdriver.Chrome(CHROME_DRIVER_DIR)
 
 def Login_KULASIS():
