@@ -6,7 +6,7 @@ from settings import CHROME_DRIVER_DIR, ECS_ID, PASSWORD, BASE_DIR
 
 driver = webdriver.Chrome(CHROME_DRIVER_DIR)
 
-def Login_KULASIS():
+def login_KULASIS():
     driver.get("https://www.k.kyoto-u.ac.jp/student/la/top")
     driver.set_window_size(750, 1000)
 
@@ -44,7 +44,7 @@ def create_lecture_folders():
     driver.close()
 
 def main():
-    Login_KULASIS()
+    login_KULASIS()
     proceed_to_timeslot_list()
     create_lecture_folders()
 
