@@ -1,10 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 import os
-from settings import CHROME_DRIVER_DIR, ECS_ID, PASSWORD, BASE_DIR
+from settings import ECS_ID, PASSWORD, BASE_DIR
 
-driver = webdriver.Chrome(CHROME_DRIVER_DIR)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 def login_KULASIS():
     driver.get("https://www.k.kyoto-u.ac.jp/student/la/top")
