@@ -42,13 +42,14 @@ def create_lecture_folders():
         dir_name = str(cnt) + "_" + name
         new_dir = base_dir + str(dir_name)
         os.mkdir(new_dir)
-    
-    driver.close()
 
 def main():
-    login_KULASIS()
-    proceed_to_timeslot_list()
-    create_lecture_folders()
+    try:
+        login_KULASIS()
+        proceed_to_timeslot_list()
+        create_lecture_folders()
+    finally:
+        driver.close()
 
 if __name__ == "__main__":
     main()
